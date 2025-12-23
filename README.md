@@ -18,7 +18,7 @@ This module optimizes the standard Odoo Discuss (Mail) functionality to ensure r
 1.  **Clone the Repository:**
     ```bash
     cd /your/odoo/custom/addons
-    git clone [https://github.com/metasamyar/odoo-custom-addons.git](https://github.com/metasamyar/odoo-custom-addons.git)
+    git clone [https://github.com/metasamyar/Odoo-Discuss-Web-Push-Notifications.git](https://github.com/metasamyar/Odoo-Discuss-Web-Push-Notifications.git)
     ```
 
 2.  **Restart Odoo:**
