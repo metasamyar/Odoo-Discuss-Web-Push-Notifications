@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_push_subscription_list" model="ir.ui.view">
+        <field name="name">push.subscription.list</field>
+        <field name="model">push.subscription</field>
+        <field name="arch" type="xml">
+            <list string="Push Subscriptions">
+                <field name="partner_id"/>
+                <field name="endpoint"/>
+                <field name="create_date"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_push_subscription_form" model="ir.ui.view">
+        <field name="name">push.subscription.form</field>
+        <field name="model">push.subscription</field>
+        <field name="arch" type="xml">
+            <form string="Push Subscription">
+                <sheet>
+                    <group>
+                        <field name="partner_id"/>
+                        <field name="endpoint"/>
+                        <field name="keys_p256dh"/>
+                        <field name="keys_auth"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_push_subscription" model="ir.actions.act_window">
+        <field name="name">Push Subscriptions</field>
+        <field name="res_model">push.subscription</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No subscriptions yet.
+            </p>
+            <p>
+                Users are automatically subscribed when they log in if their browser supports it.
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_push_subscription"
+              name="Web Push Subscriptions"
+              parent="base.menu_custom"
+              action="action_push_subscription"
+              sequence="50"/>
+</odoo>
